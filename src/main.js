@@ -21,7 +21,7 @@ form.addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
     });
-    message.textContent = "Thanks! You’ll be notified ❤️";
+    message.textContent = "Thanks! You’ll be notified ❤️. Come back soon for a sneak peak!";
     message.classList.remove("text-red-600");
     message.classList.add("text-green-600");
     emailInput.value = "";
