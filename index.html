@@ -3,16 +3,101 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>thetomatoapp</title>
+
+  <title>The Tomato App — Join the Waitlist</title>
+  <link rel="icon" type="image/png" href="/tomato.png" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </head>
 
-<body>
-  <h1 class="text-4xl font-bold text-red-600 underline">
-    Tailwind is working!
-  </h1>
+<body class="bg-red-50 min-h-screen flex flex-col relative overflow-hidden">
+
+  <div id="intro-container"
+    class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none bg-transparent">
+
+    <img id="flying-tomato" src="/tomato.png" alt="Incoming Tomato" class="absolute w-24 h-24 object-contain z-50"
+      style="opacity: 0;" />
+
+    <div id="splat-screen"
+      class="absolute top-0 left-0 w-full z-40 flex flex-col justify-end filter drop-shadow-[0_10px_8px_rgba(220,38,38,0.5)]">
+      <div class="bg-red-600 flex-grow w-full"></div>
+
+      <svg class="w-full h-auto text-red-600 fill-current -mb-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill-opacity="1"
+          d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,186.7C672,192,768,160,864,149.3C960,139,1056,149,1152,154.7C1248,160,1344,160,1392,160L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+      </svg>
+    </div>
+  </div>
+
+  <div id="site-content" class="flex flex-col flex-grow opacity-0">
+
+    <div class="flex flex-col items-center justify-center flex-grow px-4 py-20">
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-red-700 text-center mb-6">
+        LAUNCHING 2026
+      </h2>
+
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-red-700 text-center mb-4">
+        The Tomato App
+      </h1>
+
+      <p class="text-gray-700 text-center max-w-lg mb-8 text-lg">
+        Stalk your friends screen-time. Shame them when they rot. Roasts to keep you on track. <br>
+        Join the waitlist to show your interest!
+      </p>
+
+      <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-md">
+        <form id="email-form" class="flex flex-col gap-4">
+
+          <input type="email" id="email-input" name="email" required placeholder="Enter your email"
+            class="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none" />
+
+          <button type="submit" class="bg-red-600 hover:bg-red-700 text-white p-3 rounded-lg font-semibold transition">
+            Join Waitlist
+          </button>
+        </form>
+
+        <p id="form-message" class="text-center text-sm mt-3"></p>
+      </div>
+    </div>
+
+    <div class="flex justify-center gap-6 mt-10 mb-10">
+      <a href="https://tiktok.com/@thetomatoapp" target="_blank" class="text-red-600 hover:text-red-700 transition"
+        aria-label="TikTok">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.7 2h3.4c.1 1.2.6 2.3 1.4 3.2.7.8 1.6 1.4 2.7 1.6v3.4c-1.4-.1-2.7-.6-3.9-1.4v7.7c0 
+      3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.3 0 .7 0 1 .1v3.4c-.3-.1-.7-.1-1-.1-1.5 
+      0-2.6 1.1-2.6 2.6S10.2 20 11.7 20s2.6-1.1 2.6-2.6V2z" />
+        </svg>
+      </a>
+
+      <a href="https://twitter.com/thetomatoapp" target="_blank" class="text-red-600 hover:text-red-700 transition"
+        aria-label="Twitter">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18 2h3l-7.5 9.5L22 22h-6l-4.5-6L7 22H1l7.5-10L1 2h6l4.5 6L18 2z" />
+        </svg>
+      </a>
+
+      <a href="mailto:thetomatoapp@gmail.com" class="text-red-600 hover:text-red-700 transition" aria-label="Email">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 
+      5-8-5V6l8 5 8-5v2z" />
+        </svg>
+      </a>
+
+    </div>
+
+    <footer class="text-center text-gray-500 text-sm py-6">
+      © 2025 The Tomato App All rights reserved.
+    </footer>
+
+  </div>
+
   <script type="module" src="/src/main.js"></script>
+
 </body>
 
 </html>
