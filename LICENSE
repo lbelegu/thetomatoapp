@@ -1,0 +1,43 @@
+PROPRIETARY AND CONFIDENTIAL SOFTWARE LICENSE
+
+Copyright (c) 2025 The Tomato App. All rights reserved.
+Leon Belegu, Jolie Huang, and Selma Doganata
+
+----------------------------------------------------------------------
+1. OWNERSHIP & INTELLECTUAL PROPERTY
+----------------------------------------------------------------------
+
+The software, source code, design, documentation, and all associated files (collectively, the “Software”) are the exclusive and proprietary property of The Tomato App (the “Copyright Holder”). The Software is considered confidential and constitutes valuable trade secrets of the Copyright Holder. All intellectual property rights, including title, copyright, and distribution rights, remain exclusively with the Copyright Holder.
+
+----------------------------------------------------------------------
+2. LICENSE GRANT & PERMITTED USE
+----------------------------------------------------------------------
+
+The Software is not licensed for general public use. A limited, non-exclusive, non-transferable license to use, access, or modify the Software is granted only to individuals explicitly authorized by the Copyright Holder (e.g., repository collaborators, named internal employees).
+
+Any authorized use is strictly limited to the scope defined in the separate written agreement or collaborator permissions granted by the Copyright Holder.
+
+----------------------------------------------------------------------
+3. PROHIBITIONS (STRICTLY FORBIDDEN)
+----------------------------------------------------------------------
+
+Unless explicitly granted in a separate, written, and executed agreement by the Copyright Holder, you are NOT permitted to:
+
+* **Copy or Distribute:** Copy, transfer, sublicense, share, publish, or redistribute the Software or any portion thereof, in any form or medium.
+* **Modification:** Modify, alter, translate, or create derivative works of the Software.
+* **Reverse Engineering:** Reverse engineer, decompile, or disassemble the Software.
+* **Commercial Use:** Use the Software for any commercial, non-commercial, or personal purposes outside the scope of any explicit written agreement.
+
+Any unauthorized use of the Software is strictly prohibited and constitutes a material breach of this license, which may result in legal action.
+
+----------------------------------------------------------------------
+4. WARRANTY DISCLAIMER
+----------------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+----------------------------------------------------------------------
+5. TERMINATION
+----------------------------------------------------------------------
+
+This license terminates immediately and without notice if you fail to comply with any of the terms of this Agreement. Upon termination, you must destroy all copies of the Software.
