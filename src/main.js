@@ -108,3 +108,44 @@ setTimeout(() => {
   }, animationDurationMs);
 
 }, introDurationMs);
+
+
+//swiper js
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+
+// Initialize Swiper
+const swiper = new Swiper(".mySwiper", {
+  modules: [Navigation, Pagination],
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+// Auto-advance when a video finishes
+document.querySelectorAll(".swiper-slide video").forEach((video) => {
+  video.muted = true; // allow autoplay on load
+
+  video.addEventListener("ended", () => {
+    swiper.slideNext(); // move to next slide when video ends
+    // optionally autoplay the next video
+    const nextVideo = swiper.slides[swiper.activeIndex].querySelector("video");
+    if (nextVideo) {
+      nextVideo.play();
+    }
+  });
+});
+
+// Optional: autoplay the first slide video immediately
+const firstVideo = document.querySelector(".swiper-slide video");
+if (firstVideo) {
+  firstVideo.play();
+}

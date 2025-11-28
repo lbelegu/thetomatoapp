@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
 
 /* Define the animation */
 @keyframes moveUpDown {
@@ -27,4 +31,13 @@
 
 .animate-words .word[data-word-index="3"] {
   animation-delay: 0.2s;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: red !important; /* Tailwind blue-500 */
+}
+
+.swiper-pagination-bullet-active{
+  background: red !important;
 }
