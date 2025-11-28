@@ -1,1 +1,3 @@
-www.thetomatoapp.com
+Type: CNAME
+Name/Host: www
+Value: yourusername.github.io
