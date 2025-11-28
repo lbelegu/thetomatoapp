@@ -1,25 +1,57 @@
-# .github/workflows/deploy.yml
-
-name: Deploy to GitHub Pages
+name: Deploy Vanilla JS App to GitHub Pages
 
 on:
   push:
-    branches:
-      - main 
+    branches: [main] # Triggers on push to your main branch
   workflow_dispatch: 
 
+# CRITICAL: Define permissions for the two jobs
+permissions:
+  contents: read      # Needed for checkout code
+  pages: write        # Needed for deploying the site
+  id-token: write     # Needed for deployment authentication
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  build-and-deploy:
+  # JOB 1: BUILD (Compiles your code and Tailwind CSS)
+  build:
     runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write
-    
     steps:
-      - uses: actions/checkout@v4
-      # ... (rest of your steps)
-      - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci # Use npm ci for clean installs in CI
+
+      - name: Build project (Tailwind Compilation)
+        run: npm run build
+
+      # Configure GitHub Pages environment
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      # Upload the compiled 'dist' folder as an artifact
+      - name: Upload build output
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist # Vite's default output folder
+
+  # JOB 2: DEPLOY (Publishes the uploaded artifact)
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
